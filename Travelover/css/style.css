@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800|Nanum+Myeongjo:400,700,800&subset=korean');
+
+/*
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Nanum Myeongjo', serif;
+
+    color:#80d8ff; // rgb(132, 216, 253)
+    color:#40c4ff; // rgb(72, 197, 252)
+    color:#00b0ff; // rgb(30, 177, 252)
+    color:#0091ea; // rgb(24, 147, 231)
+    // rgb(247, 188, 208) // rgb(242, 144, 177) 
+    // rgb(170, 254, 235) // rgb(108, 254, 218) // rgb(50, 232, 183)
+*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html {
+    color:#444;
+}
+
+.header {
+    height:95vh;
+    background-image:linear-gradient(to right bottom, rgba(170, 254, 235, .7), rgba(126, 91, 191, .6)), url(/img/la_palm_trees_.jpg);
+    background-size:cover;
+    background-position:top;
+    position:relative;
+
+    clip-path:polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+}
+.logo_box {
+    position:relative;
+    top:40px;
+    left:40px;
+}
+.logo {
+    height:35px;
+}
+.h_text_box {
+    position:absolute;
+    top:45%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+}
+.heading_primary {
+    color:#FFF;
+    text-transform:uppercase;
+
+    backface-visibility:hidden;
+    margin-bottom:60px;
+}
+.heading_primary_main {
+    font-family: 'Nanum Gothic', sans-serif;
+    display:block;
+    font-size:65px;
+    font-weight:700;
+    margin-bottom:12px;
+    animation:moveInLeft 1s ease-in-out;
+}
+.heading_primary_sub {
+    font-family: 'Nanum Myeongjo', serif;
+    display:block;
+    font-size:25px;
+    animation:moveInRight 1s ease-in-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity:0;
+        transform:translateX(-100px);
+    }
+    80% {
+        transform:translateX(10px);
+    }
+    100% {
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity:0;
+        transform:translateX(200px);
+    }
+    80% {
+        transform:translateX(-10px);
+    }
+    100% {
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+@keyframes moveInButtom {
+    0% {
+        opacity:0;
+        transform:translateY(30px);
+    }
+    100% {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.btn:link, .btn:visited{
+    font-family: 'Nanum Gothic', sans-serif;
+    text-decoration:none;
+    padding:15px 40px;
+    display:inline-block;
+    border-radius:100px;
+    transition:all .2s;
+    position:relative;
+}
+.btn:hover {
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0, 0, 0, .2);
+}
+.btn:active {
+    transform:translateY(-1px);
+    box-shadow:0 5px 10px rgba(0, 0, 0, .2);
+}
+.btn_white {
+    background-color:rgba(255, 255, 255, .7);
+    color:#777;
+}
+.btn::after {
+    content:"";
+    display:inline-block;
+    width:100%;
+    height:100%;
+    border-radius:100px;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    transition:all .4s;
+}
+.btn_white::after {
+     background-color:rgba(255, 255, 255, .7);
+}
+.btn:hover::after {
+    transform:scaleX(1.4) scaleY(1.6);
+    opacity:0;
+}
+.btn_animated {
+    animation:moveInButtom 1s ease-out .75s;
+    animation-fill-mode:backwards;
+}
