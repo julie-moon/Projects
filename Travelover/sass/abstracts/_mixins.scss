@@ -1,0 +1,7 @@
+@mixin clearfix {
+    &::after {
+        content:"";
+        display:table; /* 찾아보기 */
+        clear:both;
+    }
+}

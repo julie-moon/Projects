@@ -1,36 +1,59 @@
 body {
-    font-family:"Lato", sans-serif;
+    font-family:'Nanum Gothic', sans-serif;
     font-weight:400;
-    line-height:1.7;
-    color:$color-gray-dark;
     /* font-size:16px; */
-    /*padding:3rem;*/
+    line-height:1.7;
+    color:$color_gray_dark;
 }
 
-.heading-primary {
-    color:$color-white;
+.heading_primary {
+    color:$color_white;
     text-transform:uppercase;
-
-    backface-visibility:hidden;
+    text-align:center;
+    backface-visibility:hidden; /* 찾아보기 */
     margin-bottom:6rem;
 
-    &-main {
+    &_main {
         display:block;
         font-size:6rem;
-        font-weight:400;
-        letter-spacing:3.5rem;
-    
-        animation-name:moveInLeft;
-        animation-duration:1s;
-        animation-timing-function:ease-out;
-        /*animation-iteration-count:2;*/
+        letter-spacing:0.5rem;
+        animation:moveInLeft 1s ease-in-out;
     }
 
-    &-sub {
+    &_sub {
+        font-family:'Nanum Myeongjo', serif;
         display:block;
         font-size:2rem;
         font-weight:700;
-        letter-spacing:1.75rem;
-        animation:moveInRight 1s ease-out;
+        animation:moveInRight 1s ease-in-out;
+    }
+}
+
+.heading_secondary {
+    font-size:3.5rem;
+    text-transform:uppercase;
+    font-weight:700;
+    display:inline-block;
+    background-image:linear-gradient(to right, $color_mint_1, $color_purple_1);
+    -webkit-background-clip:text; /* 찾아보기 */
+    color:transparent;
+    transition:all .2s;
+
+    &:hover {
+        transform:skewX(-15deg); /* skewY(20deg) scale(1.1) */
+        text-shadow:.5rem 1rem 2rem rgba($color_black, .2);
+    }
+}
+
+.heading_tertiary {
+    font-size:$default_font_size;
+    font-weight:700;
+}
+
+.paragraph {
+    font-size:$default_font_size;
+
+    &:not(:last-child) {
+        margin-bottom:3rem;
     }
 }
