@@ -1,0 +1,125 @@
+.card {
+    perspective:150rem;
+    -moz-perspective:150rem;
+    position:relative;
+    height:52rem;
+
+    &__side {
+        height:52rem;
+        transition:all .5s;
+        transition:all .8s ease;
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        backface-visibility:hidden;
+        overflow:hidden; /* 화면 확대 시 이미지 overflow 막기 */
+        box-shadow:0 1.5rem 4rem rgba($color_black, .15);
+
+        &__front {
+            background-color:$color_white;
+        }
+
+        &__back {
+            transform:rotateY(180deg);
+
+            &_1 {
+                background-image:linear-gradient(to right bottom, $color_yellow_1, $color_orange_1);
+            }
+            &_2 {
+                background-image:linear-gradient(to right bottom, $color_mint_1, $color_purple_1);
+            }
+            &_3 {
+                background-image:linear-gradient(to right bottom, $color_blue_1, $color_blue_4);
+            }
+        }
+    }
+
+    &:hover &__side__front{
+        transform:rotateY(-180deg);
+    }
+
+    &:hover &__side__back{
+        transform:rotateY(0);
+    }
+
+    &__picture {
+        background-size:cover;
+        height:23rem; 
+        background-blend-mode:soft-light;
+        -webkit-clip-path:polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        clip-path:polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+        &_1 {
+            background-image:linear-gradient(to right bottom, $color_yellow_1, $color_orange_1), url(../img/making_perfume.JPG);
+        }
+        &_2 {
+            background-image:linear-gradient(to right bottom, $color_mint_1, $color_purple_1), url(../img/central_park.JPG);
+        }
+        &_3 {
+            background-image:linear-gradient(to right bottom, $color_blue_1, $color_blue_4), url(../img/Sintra.JPG);
+        }
+    }
+
+    &__heading{
+        font-family:'Nanum Myeongjo', serif;
+        font-size:2.8rem;
+        color:$color_white;
+        text-align:right;
+        position:absolute;
+        top:12rem;
+        right:2rem;
+        width:50%;
+    }
+
+    &__heading_span {
+        padding:1rem 1.5rem;
+        -webkit-box-decoration-break:clone;
+        box-decoration-break:clone;
+        &_1 {
+            background-image:linear-gradient(to right bottom, rgba($color_yellow_1, .85), rgba($color_orange_1, .85));
+        }
+        &_2 {
+            background-image:linear-gradient(to right bottom, rgba($color_mint_1, .85), rgba($color_purple_1, .85));
+        }
+        &_3 {
+            background-image:linear-gradient(to right bottom, rgba($color_blue_1, .85), rgba($color_blue_4, .85));
+        }
+    }
+
+    &__details {
+        padding:3rem;
+        ul {
+            list-style:none;
+            width:80%;
+            margin:0 auto;
+
+            li {
+                text-align:center;
+                font-size:1.5rem;
+                padding:1rem;
+
+                &:not(:last-child){
+                    border-bottom:1px solid $color_gray_light_2;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+    }
+
+    &__price_box {
+        text-align:center;
+        margin-bottom:2rem;
+        color:$color_white;
+    }
+
+    &__price_value {
+        font-size:5rem;
+    }
+}

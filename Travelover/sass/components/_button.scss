@@ -46,6 +46,15 @@
         } 
     }
 
+    &_mint {
+        background-color:$color_mint_3;
+        color:$color_white;
+
+        &::after {
+            background-color:$color_white;
+        } 
+    }
+
     &_animated {
         animation:moveInBottom .5s ease-in-out .75s;
         animation-fill-mode:backwards; /* 찾아보기 */

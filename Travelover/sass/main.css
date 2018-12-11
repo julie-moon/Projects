@@ -194,6 +194,14 @@ body {
   margin-bottom: 8rem;
 }
 
+.u_margin_top_big {
+  margin-top: 8rem;
+}
+
+.u_margin_top_huge {
+  margin-top: 10rem;
+}
+
 .btn:link, .btn:visited {
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -249,6 +257,15 @@ body {
   background-color: #FFF;
 }
 
+.btn_mint {
+  background-color: #32e8b7;
+  color: #FFF;
+}
+
+.btn_mint::after {
+  background-color: #FFF;
+}
+
 .btn_animated {
   -webkit-animation: moveInBottom .5s ease-in-out .75s;
           animation: moveInBottom .5s ease-in-out .75s;
@@ -282,6 +299,159 @@ body {
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.card {
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem;
+}
+
+.card__side {
+  height: 52rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: hidden;
+  /* 화면 확대 시 이미지 overflow 막기 */
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.card__side__front {
+  background-color: #FFF;
+}
+
+.card__side__back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card__side__back_1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+
+.card__side__back_2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#aafeeb), to(#7e5bbf));
+  background-image: linear-gradient(to right bottom, #aafeeb, #7e5bbf);
+}
+
+.card__side__back_3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#84d8fd), to(#0091ea));
+  background-image: linear-gradient(to right bottom, #84d8fd, #0091ea);
+}
+
+.card:hover .card__side__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card:hover .card__side__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.card__picture {
+  background-size: cover;
+  height: 23rem;
+  background-blend-mode: soft-light;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.card__picture_1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730)), url(../img/making_perfume.JPG);
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/making_perfume.JPG);
+}
+
+.card__picture_2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#aafeeb), to(#7e5bbf)), url(../img/central_park.JPG);
+  background-image: linear-gradient(to right bottom, #aafeeb, #7e5bbf), url(../img/central_park.JPG);
+}
+
+.card__picture_3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#84d8fd), to(#0091ea)), url(../img/Sintra.JPG);
+  background-image: linear-gradient(to right bottom, #84d8fd, #0091ea), url(../img/Sintra.JPG);
+}
+
+.card__heading {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 2.8rem;
+  color: #FFF;
+  text-align: right;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  width: 50%;
+}
+
+.card__heading_span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.card__heading_span_1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.85)), to(rgba(255, 119, 48, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+
+.card__heading_span_2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(170, 254, 235, 0.85)), to(rgba(126, 91, 191, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(170, 254, 235, 0.85), rgba(126, 91, 191, 0.85));
+}
+
+.card__heading_span_3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(132, 216, 253, 0.85)), to(rgba(0, 145, 234, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(132, 216, 253, 0.85), rgba(0, 145, 234, 0.85));
+}
+
+.card__details {
+  padding: 3rem;
+}
+
+.card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.card__price_box {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #FFF;
+}
+
+.card__price_value {
+  font-size: 5rem;
 }
 
 .composition {
@@ -326,6 +496,35 @@ body {
 .composition:hover .composition__photo:not(:hover) {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.feature_box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.feature_box:hover {
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+}
+
+.feature_box__icon {
+  font-size: 6rem;
+  margin-bottom: .5rem;
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#aafeeb), to(#7e5bbf));
+  background-image: linear-gradient(to right, #aafeeb, #7e5bbf);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .row {
@@ -387,7 +586,7 @@ body {
   position: relative;
   /* .logo_box, position 때문에 */
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .header .logo_box {
@@ -414,5 +613,26 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh;
+}
+
+.section_features {
+  padding: 20rem 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(170, 254, 235, 0.6)), to(rgba(126, 91, 191, 0.6))), url(../img/la_palm_trees_.jpg);
+  background-image: linear-gradient(to right bottom, rgba(170, 254, 235, 0.6), rgba(126, 91, 191, 0.6)), url(../img/la_palm_trees_.jpg);
+  background-size: cover;
+  -webkit-transform: skewY(-7deg);
+          transform: skewY(-7deg);
+  margin-top: -10rem;
+}
+
+.section_features > * {
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
+}
+
+.section_tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem 0;
+  margin-top: -10rem;
 }
 /*# sourceMappingURL=main.css.map */
