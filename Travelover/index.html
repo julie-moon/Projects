@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <div class="logo_box">
-            <!-- <img src="" alt="Logo" class="logo" /> -->
+            <img src="img/logo.png" alt="Logo" class="logo" />
         </div>
         <div class="text_box">
             <h1 class="heading_primary">
@@ -185,6 +185,111 @@
                 <a href="#" class="btn btn_mint">투어 모두 보기</a>
             </div>
         </section>
+        <section class="section_stories">
+            <div class="bg_video">
+                <video class="bg_video__content" autoplay muted loop>
+                    <source src="/video/newyork.mp4" type="video/mp4" />
+                    사용하시 계신 브라우저에서는 지원되지 않습니다.
+                </video>
+            </div>
+            <div class="u_center_text u_margin_bottom_big">
+                <h2 class="heading_secondary">Travelover들의 투어 후기</h2>
+            </div>
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="img/profile.png" alt="님의 프로필" class="story__img">
+                        <figcaption class="story__caption">Julie Moon</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading_tertiary">가족들과 즐거운 시간을 보냈습니다.</h3>
+                        <p>
+                            가족들과 아침 일찍 일어나 센트럴파크 조깅 투어에 참여했습니다. 뉴요커들과 인사를 나누고, 함께 조깅한 경험은 색다르게 다가왔습니다. 뉴욕에 오시면 꼭! 해보시길 추천드립니다-! (참고로 겨울에는 진행하지 않는다고 합니다.) 봄~가을에 여행하실 분들에게는 강추합니다!
+                        </p>
+                    </div>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="img/profile.png" alt="님의 프로필" class="story__img">
+                        <figcaption class="story__caption">Julie Moon</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading_tertiary">가족들과 즐거운 시간을 보냈습니다.</h3>
+                        <p>
+                            가족들과 아침 일찍 일어나 센트럴파크 조깅 투어에 참여했습니다. 뉴요커들과 인사를 나누고, 함께 조깅한 경험은 색다르게 다가왔습니다. 뉴욕에 오시면 꼭! 해보시길 추천드립니다-! (참고로 겨울에는 진행하지 않는다고 합니다.) 봄~가을에 여행하실 분들에게는 강추합니다!
+                        </p>
+                    </div>
+                </div> 
+            </div>
+            <div class="u_center_text u_margin_top_huge">
+                <a href="#" class="btn_text">모든 후기 읽기 &rarr;</a>
+            </div>
+        </section>
+        <section class="section_book">
+            <div class="row">
+                <div class="book">
+                    <div class="book__form">
+                        <form action="#" class="form">
+                            <div class="u_margin_bottom_medium">
+                                <h2 class="heading_secondary">투어 신청하기</h2>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" id="name" class="form__input" placeholder="이름" required />
+                                <label for="name" class="form__label">이름</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="email" id="email" class="form__input" placeholder="이메일" required />
+                                <label for="email" class="form__label">이메일</label>
+                            </div>
+                            <div class="form__group u_margin_bottom_medium">
+                                <div class="form__radio_group">
+                                    <input type="radio" id="small" name="size" class="form__radio_input" />
+                                    <label for="small" class="form__radio_label">
+                                        <span class="form__radio_button"></span>
+                                        소규모(10인 미만)
+                                    </label>
+                                </div>
+                                <div class="form__radio_group">
+                                    <input type="radio" id="large" name="size" class="form__radio_input" />
+                                    <label for="large" class="form__radio_label">
+                                        <span class="form__radio_button"></span>
+                                        대규모(10인 이상)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <button class="btn btn_mint">제출하기 &rarr;</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer__logo_box">
+            <img src="img/logo.png" alt="로고" class="footer__logo">
+        </div>
+        <div class="row">
+            <div class="col_1_of_2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col_1_of_2">
+                <p class="footer__copyright">
+                    <a href="#" class="footer__link">https://github.com/julie-moon</a> Copyright &copy; by Juyoung Moon
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

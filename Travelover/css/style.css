@@ -70,7 +70,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #aafeeb, #7e5bbf);
+  background-image: linear-gradient(to right, #6cfeda, #7e5bbf);
   -webkit-background-clip: text;
   /* 찾아보기 */
   color: transparent;
@@ -90,18 +90,38 @@ body {
     margin-bottom: 3rem; }
 
 .u_center_text {
-  text-align: center; }
+  text-align: center !important; }
 
 .u_margin_bottom_small {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem !important; }
 
 .u_margin_bottom_medium {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .u_margin_bottom_big {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
-.btn:link, .btn:visited {
+.u_margin_top_big {
+  margin-top: 8rem !important; }
+
+.u_margin_top_huge {
+  margin-top: 10rem !important; }
+
+.bg_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: .5;
+  /*overflow:hidden;*/ }
+  .bg_video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.btn, .btn:link, .btn:visited {
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
@@ -109,7 +129,9 @@ body {
   border-radius: 10rem;
   transition: all .2s;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -118,7 +140,8 @@ body {
     transform: scaleX(1.4) scaleY(1.7);
     opacity: 0; }
 
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
@@ -140,6 +163,12 @@ body {
   .btn_white::after {
     background-color: #FFF; }
 
+.btn_mint {
+  background-color: #32e8b7;
+  color: #FFF; }
+  .btn_mint::after {
+    background-color: #FFF; }
+
 .btn_animated {
   animation: moveInBottom .5s ease-in-out .75s;
   animation-fill-mode: backwards;
@@ -148,6 +177,7 @@ body {
 .btn_text:link, .btn_text:visited {
   font-size: 1.6rem;
   color: #32e8b7;
+  font-weight: 700;
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid #32e8b7;
@@ -163,6 +193,92 @@ body {
 .btn_text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem; }
+  .card__side {
+    height: 52rem;
+    transition: all .5s;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    /* 화면 확대 시 이미지 overflow 막기 */
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__side__front {
+      background-color: #FFF; }
+    .card__side__back {
+      transform: rotateY(180deg); }
+      .card__side__back_1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side__back_2 {
+        background-image: linear-gradient(to right bottom, #aafeeb, #7e5bbf); }
+      .card__side__back_3 {
+        background-image: linear-gradient(to right bottom, #84d8fd, #0091ea); }
+  .card:hover .card__side__front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side__back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: soft-light;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+    .card__picture_1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/making_perfume.JPG); }
+    .card__picture_2 {
+      background-image: linear-gradient(to right bottom, #aafeeb, #7e5bbf), url(../img/central_park.JPG); }
+    .card__picture_3 {
+      background-image: linear-gradient(to right bottom, #84d8fd, #0091ea), url(../img/Sintra.JPG); }
+  .card__heading {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 2.8rem;
+    color: #FFF;
+    text-align: right;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 50%; }
+  .card__heading_span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading_span_1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading_span_2 {
+      background-image: linear-gradient(to right bottom, rgba(170, 254, 235, 0.85), rgba(126, 91, 191, 0.85)); }
+    .card__heading_span_3 {
+      background-image: linear-gradient(to right bottom, rgba(132, 216, 253, 0.85), rgba(0, 145, 234, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .card__price_box {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #FFF; }
+  .card__price_value {
+    font-size: 5rem; }
 
 .composition {
   position: relative; }
@@ -189,6 +305,187 @@ body {
       z-index: 20; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
+
+.feature_box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform .3s; }
+  .feature_box:hover {
+    transform: translateY(-1.5rem); }
+  .feature_box__icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #aafeeb, #7e5bbf);
+    -webkit-background-clip: text;
+    color: transparent; }
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all .3s; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #32e8b7; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #ff7730; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form__radio_group {
+  width: 49%;
+  display: inline-block; }
+
+.form__radio_input {
+  display: none; }
+
+.form__radio_label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem; }
+
+.form__radio_button {
+  width: 3rem;
+  height: 3rem;
+  border: 5px solid #32e8b7;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -.45rem; }
+  .form__radio_button::after {
+    content: "";
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #32e8b7;
+    opacity: 0;
+    transition: opacity .2s; }
+
+.form__radio_input:checked ~ .form__radio_label .form__radio_button::after {
+  opacity: 1; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-15deg); }
+  .story__shape {
+    /*background-color:orangered;*/
+    width: 13rem;
+    height: 13rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(15deg);
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transform: scale(1.1);
+    backface-visibility: hidden;
+    transition: all .5s; }
+  .story__text {
+    transform: skewX(15deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: scale(1);
+    filter: blur(2px) brightness(80%); }
+
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+  font-size: 1.4rem; }
+  .footer__logo_box {
+    text-align: center;
+    margin-bottom: 8rem; }
+  .footer__logo {
+    width: 7rem;
+    height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+    display: inline-block; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    background-color: #333;
+    color: #f7f7f7;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s; }
+  .footer__link:hover, .footer__link:active {
+    color: #32e8b7;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scale(1.2); }
+  .footer__copyright {
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+    color: #f7f7f7;
+    width: 75%;
+    float: right; }
+    .footer__copyright .footer__link {
+      text-transform: none; }
 
 .row {
   max-width: 114rem;
@@ -226,13 +523,14 @@ body {
   background-position: top;
   position: relative;
   /* .logo_box, position 때문에 */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header .logo_box {
     position: absolute;
     top: 4rem;
     left: 4rem; }
     .header .logo_box .logo {
-      height: 3.5rem; }
+      height: 4.5rem; }
   .header .text_box {
     /* text_box 가운데 정렬하기 위한 코드 */
     position: absolute;
@@ -245,3 +543,36 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+
+.section_features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(170, 254, 235, 0.6), rgba(126, 91, 191, 0.6)), url(../img/la_palm_trees_.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem; }
+  .section_features > * {
+    transform: skewY(7deg); }
+
+.section_tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 10rem 0;
+  margin-top: -10rem; }
+
+.section_stories {
+  /* background-color:$color_gray_light_1; */
+  position: relative;
+  padding: 12rem 0; }
+
+.section_book {
+  padding: 12rem 0;
+  background-image: linear-gradient(to right bottom, #84d8fd, #7e5bbf); }
+
+.book {
+  /*background-image:linear-gradient(105deg, transparent 0%, transparent 50%, rgba($color_white, .5) 50%), url(../img/brooklyn_bridge_2.jpg);*/
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(../img/brooklyn_bridge_2.JPG);
+  background-size: cover;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  height: 50rem; }
+  .book__form {
+    width: 50%;
+    padding: 4rem 6rem; }

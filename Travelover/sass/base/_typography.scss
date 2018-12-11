@@ -3,7 +3,7 @@ body {
     font-weight:400;
     /* font-size:16px; */
     line-height:1.7;
-    color:$color_gray_dark;
+    color:$color_gray_dark_1;
 }
 
 .heading_primary {
@@ -34,7 +34,7 @@ body {
     text-transform:uppercase;
     font-weight:700;
     display:inline-block;
-    background-image:linear-gradient(to right, $color_mint_1, $color_purple_1);
+    background-image:linear-gradient(to right, $color_mint_2, $color_purple_1);
     -webkit-background-clip:text; /* 찾아보기 */
     color:transparent;
     transition:all .2s;

@@ -18,6 +18,30 @@
 
 .section_tours {
     background-color:$color_gray_light_1;
-    padding:25rem 0 50rem 0;
+    padding:25rem 0 10rem 0;
     margin-top:-10rem;
+}
+
+.section_stories {
+    /* background-color:$color_gray_light_1; */
+    position:relative;
+    padding:12rem 0;
+}
+
+.section_book {
+    padding:12rem 0;
+    background-image:linear-gradient(to right bottom, $color_blue_1, $color_purple_1);
+}
+
+.book {
+    /*background-image:linear-gradient(105deg, transparent 0%, transparent 50%, rgba($color_white, .5) 50%), url(../img/brooklyn_bridge_2.jpg);*/
+    background-image:linear-gradient(105deg, rgba($color_white, .7) 0%, rgba($color_white, .7) 50%, transparent 50%), url(../img/brooklyn_bridge_2.JPG);
+    background-size:cover;
+    box-shadow:0 1.5rem 4rem rgba($color_black, .15);
+    height:50rem;
+
+    &__form {
+        width:50%;
+        padding:4rem 6rem;
+    }
 }
