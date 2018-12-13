@@ -10,7 +10,7 @@ body {
     color:$color_white;
     text-transform:uppercase;
     text-align:center;
-    backface-visibility:hidden; /* 찾아보기 */
+    backface-visibility:hidden; 
     margin-bottom:6rem;
 
     &_main {
@@ -35,7 +35,7 @@ body {
     font-weight:700;
     display:inline-block;
     background-image:linear-gradient(to right, $color_mint_2, $color_purple_1);
-    -webkit-background-clip:text; /* 찾아보기 */
+    -webkit-background-clip:text;
     color:transparent;
     transition:all .2s;
 

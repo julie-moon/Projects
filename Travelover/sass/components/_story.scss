@@ -33,10 +33,7 @@
     }
 
     &__caption {
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(-50%, 0%);
+        @include absCenter;
         font-size:1.7rem;
         font-weight:700;
         color:$color_white;
