@@ -6,9 +6,17 @@
 }
 .u_margin_bottom_medium {
     margin-bottom:4rem !important;
+
+    @include respond(tab_port) { 
+        margin-bottom:3rem !important;
+    }
 }
 .u_margin_bottom_big {
     margin-bottom:8rem !important;
+
+    @include respond(tab_port) { 
+        margin-bottom:5rem !important;
+    }
 }
 .u_margin_top_big {
     margin-top:8rem !important;

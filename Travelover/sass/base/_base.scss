@@ -5,9 +5,31 @@
 }
 
 html {
-    font-size:62.5%;
+    font-size:62.5%; // 1rem = 10px;   10px/16px = 62.5%;
+
+    /*
+        width가 700일 때, tab_land와 tab_port 모두 해당되기 때문에
+        tab_port로 적용시키기 위해서 코드를 아래에 둠
+    */
+
+    @include respond(tab_land) { // width <= 1200
+        font-size:56.25%; // 1rem = 9px;   9px/16px = 56.25%;
+    }
+
+    @include respond(tab_port) { // width <= 900
+        font-size:50%;  // 1rem = 8px;   8px/16px = 50%;
+    }
+
+    @include respond(big_desktop) {
+        font-size:75%; // 1rem = 12px;   12px/16px = 75%
+    }
 }
 
 body {
     box-sizing:border-box;
+}
+
+::selection { /* 마우스로 블럭 잡았을 때 */
+    background-color:$color_mint_3;
+    color:$color_white;
 }

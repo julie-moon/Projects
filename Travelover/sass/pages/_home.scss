@@ -2,6 +2,10 @@
     background-color:$color_gray_light_1;
     padding:25rem 0;
     margin-top:-20vh;
+
+    @include respond(tab_port) {
+        padding:20rem 0;
+    }
 }
 
 .section_features {
@@ -14,23 +18,39 @@
     & > * {
         transform:skewY(7deg);
     }
+
+    @include respond(tab_port) {
+        padding:10rem 0;
+    }
 }
 
 .section_tours {
     background-color:$color_gray_light_1;
-    padding:25rem 0 10rem 0;
+    padding:25rem 0 15rem 0; /* padding:25rem 0 15rem 0; */
     margin-top:-10rem;
+
+    @include respond(tab_port) {
+        padding:20rem 0 10rem 0;
+    }
 }
 
 .section_stories {
     /* background-color:$color_gray_light_1; */
     position:relative;
     padding:12rem 0;
+
+    @include respond(tab_port) {
+        padding:10rem 0;
+    }
 }
 
 .section_book {
     padding:12rem 0;
     background-image:linear-gradient(to right bottom, $color_blue_1, $color_purple_1);
+
+    @include respond(tab_port) {
+        padding:10rem 0;
+    }
 }
 
 .book {
@@ -38,10 +58,25 @@
     background-image:linear-gradient(105deg, rgba($color_white, .7) 0%, rgba($color_white, .7) 50%, transparent 50%), url(../img/brooklyn_bridge_2.JPG);
     background-size:cover;
     box-shadow:0 1.5rem 4rem rgba($color_black, .15);
-    height:50rem;
+
+    @include respond(tab_land) {
+        background-image:linear-gradient(105deg, rgba($color_white, .7) 0%, rgba($color_white, .7) 65%, transparent 65%), url(../img/brooklyn_bridge_2.JPG);
+    }
+
+    @include respond(tab_port) {
+        background-image:linear-gradient(to right, rgba($color_white, .7) 0%, rgba($color_white, .7) 100%), url(../img/brooklyn_bridge_2.JPG);
+    }
 
     &__form {
         width:50%;
         padding:4rem 6rem;
+
+        @include respond(tab_land) {
+            width:65%;
+        }
+
+        @include respond(tab_port) {
+            width:100%;
+        }
     }
 }

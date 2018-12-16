@@ -12,3 +12,34 @@
     left:50%;
     transform:translate(-50%, -50%);
 }
+
+// MEDIA QUERY
+/*
+    0 ~ 600px : 모바일
+    600 ~ 900px : 태블릿(세로)
+    900 ~ 1200px : 태블릿(가로)
+    1200 ~ 1800px : 일반
+    1800px + : 큰 화면
+
+    1em = 16px
+*/
+
+// 인자값에 따라 다르게 
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        // 600px / 16px
+        @media only screen and (max-width:37.5em) { @content };
+    }
+    @if $breakpoint == tab_port {
+        // 900px / 16px
+        @media only screen and (max-width:56.25em) { @content };
+    }
+    @if $breakpoint == tab_land {
+        // 1200px / 16px
+        @media only screen and (max-width:75em) { @content };
+    }
+    @if $breakpoint == big_desktop {
+        // 1800px / 16px
+        @media only screen and (min-width:112.5em) { @content };
+    }
+}

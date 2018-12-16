@@ -3,9 +3,17 @@
     padding:10rem 0;
     font-size:1.4rem;
 
+    @include respond(tab_port) {
+        padding:8rem 0;
+    }
+
     &__logo_box {
         text-align:center;
         margin-bottom:8rem;
+
+        @include respond(tab_port) {
+            margin-bottom:6rem;
+        }
     }
 
     &__logo {
@@ -17,6 +25,11 @@
         border-top:1px solid $color_gray_light_2;
         padding-top:2rem;
         display:inline-block;
+
+        @include respond(tab_port) {
+            width:100%;
+            text-align:center;
+        }
     }
 
     &__list {
@@ -54,6 +67,11 @@
         color:$color_gray_light_1;
         width:75%;
         float:right;
+
+        @include respond(tab_port) {
+            width:100%;
+            float:none;
+        }
 
         .footer__link {
             text-transform:none;
