@@ -1,0 +1,33 @@
+.container {
+    max-width:120rem;
+    margin:8rem auto;
+    background-color:var(--color_gray_light_1);
+    box-shadow:var(--shadow_dark);
+
+    min-height:50rem;
+}
+
+.header {
+    font-size:1.4rem;
+    height:7rem;
+    background-color:var(--color_white);
+    border-bottom:var(--color_gray_light_2);
+
+    display:flex;
+    justify-content:space-between; // 주축 방향으로 플렉스 아이템 배치
+    align-items:center; // 교차축 방향으로 플렉스 아이템 배치
+}
+
+.content {
+    display:flex;
+}
+
+.sidebar {
+    background-color:var(--color_gray_dark_1);
+    flex:0 0 18%;
+}
+
+.hotel_view {
+    background-color:orangered; /* var(--color_white) */
+    flex:1; /* 1은 100 - 18%값 */
+}

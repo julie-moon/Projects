@@ -1,0 +1,117 @@
+/* logo */
+.logo {
+    height:3.25rem;
+    margin-left:3rem;
+}
+
+/* search */
+.search {
+    /*background-color:orangered;*/
+    flex:0 0 40%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    &__input {
+        font-family:inherit;
+        font-size:inherit;
+        color:inherit;
+        background-color:var(--color_gray_light_2);
+        border:none;
+        padding:.7rem 2rem;
+        border-radius:100px;
+        width:90%;
+        transition:all .2s;
+        margin-right:-3.25rem;
+
+        &:focus {
+            outline:none;
+            width:100%;
+            background-color:var(--color_gray_light_3);
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight:100;
+            color:var(--color_gray_light_4);
+        }
+    }
+
+    &__input:focus + &__button {
+        background-color:var(--color_gray_light_3);
+    }
+
+    &__button {
+        border:none;
+        background-color:var(--color_gray_light_2);
+
+        &:focus {
+            outline:none;
+        }
+        &:active {
+            transform:translateY(2px);
+        }
+    }
+
+    &__icon {
+        width:2rem;
+        height:2rem;
+        fill: var(--color_gray_dark_3); /* svg 색상 바꾸기 */
+    }
+}
+
+/* user_nav */
+.user_nav {
+    /* background-color:greenyellow; */
+    align-self:stretch;
+
+    display:flex;
+    align-items:center;
+
+    & > * { // .user_nav 자식들 선택
+        padding:0 2rem;
+        cursor:pointer;
+        height:100%; /* align-self:stretch; 적용해서 가능함 */
+
+        display:flex;
+        align-items:center;
+    }
+
+    & > *:hover {
+        background-color:var(--color_gray_light_2);
+    }
+
+    &__icon_box {
+        position:relative;
+    }
+    
+    &__icon{
+        width:2.25rem;
+        height:2.25rem;
+        fill:var(--color_gray_dark_2);
+    }
+
+    &__notification {
+        font-size:.8rem;
+        width:1.75rem;
+        height:1.75rem;
+        border-radius:50%;
+        background-color:var(--color_primary);
+        color:var(--color_white);
+        position:absolute;
+        top:1.5rem;
+        right:1.1rem;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    &__user {
+        &_photo {
+            height:3.75rem;
+            border-radius:50%;
+            margin-right:1rem;
+        }
+    }
+}

@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/* 
+    CSS custom properties CSS에서 변수 사용 가능
+    SASS 변수와 다른점
+    1. 전처리기 필요하지 않음
+*/
+:root {
+  --color_primary:#eb2f64;
+  --color_primary_light:#FF3366;
+  --color_primary_dark:#BA265D;
+  --color_gray_light_1:#faf9f9;
+  --color_gray_light_2:#f4f2f2;
+  --color_gray_light_3:#f0eeee;
+  --color_gray_light_4:#ccc;
+  --color_gray_dark_1:#333;
+  --color_gray_dark_2:#777;
+  --color_gray_dark_3:#999;
+  --color_white:#FFF;
+  --color_black:#000;
+  --shadow_dark:0 2rem 6rem rgba(0, 0, 0, .3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color_primary_light)), to(var(--color_primary_dark)));
+  background-image: linear-gradient(to right bottom, var(--color_primary_light), var(--color_primary_dark));
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: var(--color_gray_dark_2);
+}
+
+/* logo */
+.logo {
+  height: 3.25rem;
+  margin-left: 3rem;
+}
+
+/* search */
+.search {
+  /*background-color:orangered;*/
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: var(--color_gray_light_2);
+  border: none;
+  padding: .7rem 2rem;
+  border-radius: 100px;
+  width: 90%;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  margin-right: -3.25rem;
+}
+
+.search__input:focus {
+  outline: none;
+  width: 100%;
+  background-color: var(--color_gray_light_3);
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: var(--color_gray_light_4);
+}
+
+.search__input:focus + .search__button {
+  background-color: var(--color_gray_light_3);
+}
+
+.search__button {
+  border: none;
+  background-color: var(--color_gray_light_2);
+}
+
+.search__button:focus {
+  outline: none;
+}
+
+.search__button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.search__icon {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color_gray_dark_3);
+  /* svg 색상 바꾸기 */
+}
+
+/* user_nav */
+.user_nav {
+  /* background-color:greenyellow; */
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user_nav > * {
+  padding: 0 2rem;
+  cursor: pointer;
+  height: 100%;
+  /* align-self:stretch; 적용해서 가능함 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user_nav > *:hover {
+  background-color: var(--color_gray_light_2);
+}
+
+.user_nav__icon_box {
+  position: relative;
+}
+
+.user_nav__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  fill: var(--color_gray_dark_2);
+}
+
+.user_nav__notification {
+  font-size: .8rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background-color: var(--color_primary);
+  color: var(--color_white);
+  position: absolute;
+  top: 1.5rem;
+  right: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user_nav__user_photo {
+  height: 3.75rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color_gray_light_1);
+  -webkit-box-shadow: var(--shadow_dark);
+          box-shadow: var(--shadow_dark);
+  min-height: 50rem;
+}
+
+.header {
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: var(--color_white);
+  border-bottom: var(--color_gray_light_2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar {
+  background-color: var(--color_gray_dark_1);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 18%;
+          flex: 0 0 18%;
+}
+
+.hotel_view {
+  background-color: orangered;
+  /* var(--color_white) */
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  /* 1은 100 - 18%값 */
+}
+/*# sourceMappingURL=main.css.map */
