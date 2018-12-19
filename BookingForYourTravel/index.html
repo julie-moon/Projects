@@ -10,10 +10,10 @@
         <title>Booking &mdash; all things u need for your travel!</title>
     </head>
     <body>
-        <div class="container">
-            <header class="header">
+        <div class="container"> 
+            <header class="header"> <!-- display:flex -->
                 <img src="img/logo.png" alt="travelover logo" class="logo">
-                <form action="#" class="search">
+                <form action="#" class="search"> <!-- display:flex -->
                     <input type="text" class="search__input" placeholder="검색하기" />
                     <button class="search__button">
                         <svg class="search__icon">
@@ -21,31 +21,172 @@
                         </svg>
                     </button>
                 </form>
-                <nav class="user_nav">
-                    <div class="user_nav__icon_box">
+                <nav class="user_nav"> <!-- display:flex -->
+                    <div class="user_nav__icon_box"> <!-- display:flex -->
                         <svg class="user_nav__icon">
                             <use xlink:href="img/sprite.svg#icon-bookmark"></use>
                         </svg>
                         <span class="user_nav__notification">7</span>
                     </div>
-                    <div class="user_nav__icon_box">
+                    <div class="user_nav__icon_box"> <!-- display:flex -->
                         <svg class="user_nav__icon">
                             <use xlink:href="img/sprite.svg#icon-chat"></use>
                         </svg>
-                        <span class="user_nav__notification">13</span>
+                        <span class="user_nav__notification">13</span> <!-- display:flex -->
                     </div>
-                    <div class="user_nav__user">
+                    <div class="user_nav__user"> <!-- display:flex -->
                         <img src="img/user.png" alt="유저 사진" class="user_nav__user_photo" />
                         <span class="user_nav__user_name">Julie</span>
                     </div>
                 </nav>
             </header>
             <div class="content">
-                <nav class="sidebar">
-                    Navigation
+                <nav class="sidebar"> <!-- display:flex -->
+                    <ul class="side_nav">
+                        <li class="side_nav__item side_nav__item__active">
+                            <a href="#" class="side_nav__link"> <!-- display:flex -->
+                                <svg class="side_nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                                </svg>
+                                <span>Hotel</span>
+                            </a>
+                        </li>
+                        <li class="side_nav__item">
+                            <a href="#" class="side_nav__link">
+                                <svg class="side_nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                                </svg>
+                                <span>Flight</span>
+                            </a>
+                        </li>
+                        <li class="side_nav__item">
+                            <a href="#" class="side_nav__link">
+                                <svg class="side_nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-key"></use>
+                                </svg>
+                                <span>Car rental</span>
+                            </a>
+                        </li>
+                        <li class="side_nav__item">
+                            <a href="#" class="side_nav__link">
+                                <svg class="side_nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-map"></use>
+                                </svg>
+                                <span>Tours</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="legal">
+                        &copy; 2018 by Travelover. All rights reserved. 
+                    </div>
                 </nav>
                 <main class="hotel_view">
-                    Hotel
+                    <div class="gallery"> <!-- display:flex -->
+                        <figure class="gallery__item">
+                            <img src="img/hotel-1.jpg" alt="호텔 사진 1" class="gallery__photo">
+                        </figure>
+                        <figure class="gallery__item">
+                            <img src="img/hotel-2.jpg" alt="호텔 사진 2" class="gallery__photo">
+                        </figure>
+                        <figure class="gallery__item">
+                            <img src="img/hotel-3.jpg" alt="호텔 사진 3" class="gallery__photo">
+                        </figure>
+                    </div> <!-- // .gallery -->
+                    <div class="overview"> <!-- display:flex -->
+                        <h1 class="overview__heading">
+                            Hotel Las Palmas
+                        </h1>
+                        <div class="overview__stars"> <!-- display:flex -->
+                            <svg class="overview__icon_star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="overview__icon_star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="overview__icon_star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="overview__icon_star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="overview__icon_star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                        </div> <!-- // .overview__stars -->
+                        <div class="overview__location"> <!-- display:flex -->
+                            <svg class="overview__icon_location">
+                                <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                            </svg>
+                            <button class="btn_inline">Albufeira, Portugal</button>
+                        </div> <!-- // .overview__location -->
+                        <div class="overview__rating"> <!-- display:flex -->
+                            <div class="overview__rating_average">8.6</div>
+                            <div class="overview__rating_count">529명의 평가</div>
+                        </div> <!-- // .overview__rating -->
+                    </div> <!-- // .overview -->
+                    <div class="detail"> <!-- display:flex -->
+                        <div class="description">
+                            <p class="paragraph">
+                                저희 'ㅇㅇㅇ호텔'은 신축건물로 최근에 오픈한 깨끗하고 조용한 호텔입니다. 하나의 룸이 복층 구조로 되어있습니다. 서귀포시와 매우 가깝고, 걸어서 10분 거리에 바다가 있습니다. 정방 폭포와 쇠소깍, 외돌개 등 관광지와 매우 인접해 있으며 올레 6코스에 위치해 있습니다. 뒤로는 한라산 풍경이 한눈에 보이며, 앞으로는 서귀포 바다가 펼쳐져 있습니다. 제주도에 오셔서 편안한 여행 되시길 바랍니다. ^^
+                            </p>
+                            <p class="paragraph">
+                                저희 'ㅇㅇㅇ호텔'은 신축건물로 최근에 오픈한 깨끗하고 조용한 호텔입니다. 하나의 룸이 복층 구조로 되어있습니다. 서귀포시와 매우 가깝고, 걸어서 10분 거리에 바다가 있습니다. 정방 폭포와 쇠소깍, 외돌개 등 관광지와 매우 인접해 있으며 올레 6코스에 위치해 있습니다. 뒤로는 한라산 풍경이 한눈에 보이며, 앞으로는 서귀포 바다가 펼쳐져 있습니다. 제주도에 오셔서 편안한 여행 되시길 바랍니다. ^^
+                            </p>
+                            <ul class="list"> <!-- display:flex -->
+                                <li class="list__item">조식 포함</li>
+                                <li class="list__item">셔틀 버스 운행</li>
+                                <li class="list__item">헤어드라이기</li>
+                                <li class="list__item">미니 냉장고</li>
+                                <li class="list__item">전기 포트</li>
+                                <li class="list__item">무료 와이파이</li>
+                                <li class="list__item">루프탑</li>
+                                <li class="list__item">인터넷 와이파이</li>
+                            </ul>
+                            <div class="recommand">
+                                <p class="recommand__count">
+                                    Lucy 외 3명이 이 호텔을 추천합니다. 
+                                </p>
+                                <div class="recommand__friends">
+                                    <img src="img/user-3.jpg" alt="추천인 1" class="recommand__photo">
+                                    <img src="img/user-4.jpg" alt="추천인 2" class="recommand__photo">
+                                    <img src="img/user-5.jpg" alt="추천인 3" class="recommand__photo">
+                                    <img src="img/user-6.jpg" alt="추천인 4" class="recommand__photo">
+                                </div>
+                            </div>
+                        </div> <!-- // .detail -->
+                        <div class="user_reviews"> <!-- display:flex -->
+                            <figure class="review">
+                                <blockquote class="review__text">
+                                    정말 깨끗하고, 직원들 모두 친절했습니다. 아침 조식도 무난했습니다. 이번에는 친구들과 왔지만 다음에는 가족들과 함께 오고싶네요. 복층이라 좋았는데 머리를 박을 수 있으니 조심하세요. 잘 쉬다 갑니다.
+                                </blockquote>
+                                <figcaption class="review__user"> <!-- display:flex -->
+                                    <img src="img/user.png" alt="리뷰 작성자 1" class="review__photo">
+                                    <div class="review__user_box">
+                                        <p class="review__user_name">문주영</p>
+                                        <p class="review__user_date">2018.12.11</p>
+                                    </div>
+                                    <div class="review__rating">7.8</div>
+                                </figcaption>
+                            </figure>
+                            <figure class="review">
+                                <blockquote class="review__text">
+                                    정말 깨끗하고, 직원들 모두 친절했습니다. 아침 조식도 무난했습니다. 이번에는 친구들과 왔지만 다음에는 가족들과 함께 오고싶네요. 복층이라 좋았는데 머리를 박을 수 있으니 조심하세요. 잘 쉬다 갑니다.
+                                </blockquote>
+                                <figcaption class="review__user">
+                                    <img src="img/user.png" alt="리뷰 작성자 1" class="review__photo">
+                                    <div class="review__user_box">
+                                        <p class="review__user_name">문주영</p>
+                                        <p class="review__user_date">2018.12.11</p>
+                                    </div>
+                                    <div class="review__rating">7.8</div>
+                                </figcaption>
+                            </figure>
+                            <button class="btn_inline">
+                                후기 모두 보기
+                                <span>&rarr;</span>
+                            </button>
+                        </div> <!-- // .user_reviews -->
+                    </div> <!-- // .detail -->
                 </main>
             </div>
         </div> <!-- // .container -->

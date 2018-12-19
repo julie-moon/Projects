@@ -22,6 +22,9 @@
     --color_black:#000;
 
     --shadow_dark:0 2rem 6rem rgba(0, 0, 0, .3);
+    --shadow_light:0 2rem 5rem rgba(0, 0, 0, .06);
+
+    --line:1px solid var(--color_gray_light_2); // 다른 var을 담을 수 있음
 }
 
 * {
