@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-        <link rel="stylesheet" href="sass/main.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         <title>Booking &mdash; all things u need for your travel!</title>
     </head>
@@ -42,7 +42,7 @@
             </header>
             <div class="content">
                 <nav class="sidebar"> <!-- display:flex -->
-                    <ul class="side_nav">
+                    <ul class="side_nav"> <!-- display:flex -->
                         <li class="side_nav__item side_nav__item__active">
                             <a href="#" class="side_nav__link"> <!-- display:flex -->
                                 <svg class="side_nav__icon">
@@ -146,14 +146,14 @@
                                 <p class="recommand__count">
                                     Lucy 외 3명이 이 호텔을 추천합니다. 
                                 </p>
-                                <div class="recommand__friends">
+                                <div class="recommand__friends"> <!-- display:flex -->
                                     <img src="img/user-3.jpg" alt="추천인 1" class="recommand__photo">
                                     <img src="img/user-4.jpg" alt="추천인 2" class="recommand__photo">
                                     <img src="img/user-5.jpg" alt="추천인 3" class="recommand__photo">
                                     <img src="img/user-6.jpg" alt="추천인 4" class="recommand__photo">
                                 </div>
                             </div>
-                        </div> <!-- // .detail -->
+                        </div> <!-- // .description -->
                         <div class="user_reviews"> <!-- display:flex -->
                             <figure class="review">
                                 <blockquote class="review__text">
@@ -187,6 +187,15 @@
                             </button>
                         </div> <!-- // .user_reviews -->
                     </div> <!-- // .detail -->
+                    <div class="cta">
+                        <h2 class="cta__book_now">
+                            선택하신 날짜에 4개의 방이 남아있습니다. 
+                        </h2>
+                        <button class="btn">
+                            <span class="btn__visible">지금 예약하기</span>
+                            <span class="btn__invisible">4개의 방이 남아있습니다.</span>
+                        </button>
+                    </div> <!-- // .cta -->
                 </main>
             </div>
         </div> <!-- // .container -->
